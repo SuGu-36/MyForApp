@@ -12,12 +12,13 @@ import RenderItem1 from '../subComp/renderItem1';
 const Item1 = () => {
   const [enteredGoal, setEnteredGoal] = useState(data1);
   const onPressText = goalTitle => {
+    console.log(goalTitle);
     setEnteredGoal(enteredGoal.filter(CurrGoal => goalTitle !== CurrGoal.id));
   };
   return (
     <View>
       <View>
-        <Text style={{fontSize: 30, ...style.ex}}>
+        <Text style={{fontSize: 30, ...Styles.ex}}>
           Hi! Welcome to Metaverse...
         </Text>
       </View>
@@ -28,7 +29,7 @@ const Item1 = () => {
           renderItem={renderItems => {
             return (
               <View>
-                <RenderItem1 {...renderItems.item} onDelete={onPressText} />
+                <RenderItem1 {...renderItems.item} id={renderItems.item.id} onDelete={onPressText} />
               </View>
             );
           }}
@@ -38,7 +39,7 @@ const Item1 = () => {
   );
 };
 
-const style = StyleSheet.create({
+const Styles = StyleSheet.create({
   ex: {
     backgroundColor: 'yellow',
     color: 'blue',

@@ -3,7 +3,8 @@ import {Text, StyleSheet, View, Pressable} from 'react-native';
 const RenderItem1 = props => {
   // const {id, name, title, clas} = props.item;
   return (
-    <Pressable onPress={() => props.onDelete.bind(this, props.id)}>
+    <View>
+    <Pressable onPress={props.onDelete.bind(this, props.id)}>
       <View
         style={{
           backgroundColor: 'blue',
@@ -16,6 +17,7 @@ const RenderItem1 = props => {
         <Text style={{fontSize: 24, color: 'white'}}>{props.clas}</Text>
       </View>
     </Pressable>
+    </View>
   );
 };
 

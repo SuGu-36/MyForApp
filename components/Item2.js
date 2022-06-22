@@ -18,7 +18,7 @@ export const Item2 = () => {
   console.log(password);
   const onSubmit = () => {
     axios
-      .put('https://reqres.in/api/users', {
+      .post('http://localhost:3000/users', {
         body: {
           first_name: username,
           last_name: password,
@@ -29,9 +29,9 @@ export const Item2 = () => {
       .catch(err => console.log(err));
 
     axios
-      .get('https://reqres.in/api/users')
+      .get('http://localhost:3000/users')
       .then(res => JSON.stringify(res.data))
-      .then(data => console.log())
+      .then(data => console.log(data))
       .catch(err => console.log(err));
 
     setModalVisible(modalVisible => !modalVisible);
