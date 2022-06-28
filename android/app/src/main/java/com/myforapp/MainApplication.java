@@ -1,5 +1,5 @@
 package com.myforapp;
-//import com.reactnativerestart.RestartPackage; 
+
 import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
