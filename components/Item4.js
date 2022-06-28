@@ -88,7 +88,7 @@ const Item4 = () => {
       );
 
       const data = response.data;
-
+      console.log(data);
       //const {id, userId, title, body} = JSON.parse(data);
       //console.log(userId, title);
 

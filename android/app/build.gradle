@@ -190,8 +190,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-
     //noinspection GradleDynamicVersion
+    //implementation project(':react-native-restart')
+    implementation "androidx.core:core-splashscreen:1.0.0-beta01"
     implementation project(':react-native-splash-screen')
     implementation "com.facebook.react:react-native:+"  // From node_modules
 

@@ -6,15 +6,21 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import RNBootSplash from "react-native-bootsplash";
+
 import SplashScreen from 'react-native-splash-screen';
 import Item1 from './components/item1';
 import {Item2} from './components/Item2';
 import Item4 from './components/Item4';
 import {ScrollView, View, StatusBar} from 'react-native';
 import {data1} from './defaultData/data1';
+
 const App = () => {
+  useEffect(()=>{ 
+    RNBootSplash.hide({ fade: true });
+  },[])
   return (
     <View>
       <StatusBar

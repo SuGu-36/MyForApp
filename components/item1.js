@@ -29,7 +29,11 @@ const Item1 = () => {
           renderItem={renderItems => {
             return (
               <View>
-                <RenderItem1 {...renderItems.item} id={renderItems.item.id} onDelete={onPressText} />
+                <RenderItem1
+                  {...renderItems.item}
+                  id={renderItems.item.id}
+                  onDelete={onPressText}
+                />
               </View>
             );
           }}

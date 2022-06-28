@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import RNRestart from 'react-native-restart';
 import axios from 'axios';
 import {
   ScrollView,
@@ -17,23 +18,23 @@ export const Item2 = () => {
   const [password, onChangeNumber] = React.useState('');
   console.log(password);
   const onSubmit = () => {
-    axios
-      .post('http://localhost:3000/users', {
-        body: {
-          first_name: username,
-          last_name: password,
-        },
-      })
-      .then(res => JSON.stringify(res.data))
-      .then(data => console.log(data))
-      .catch(err => console.log(err));
+    // axios
+    //   .post('http://localhost:3000/users', {
+    //     body: {
+    //       first_name: username,
+    //       last_name: password,
+    //     },
+    //   })
+    //   .then(res => JSON.stringify(res.data))
+    //   .then(data => console.log(data))
+    //   .catch(err => console.log(err));
 
-    axios
-      .get('http://localhost:3000/users')
-      .then(res => JSON.stringify(res.data))
-      .then(data => console.log(data))
-      .catch(err => console.log(err));
-
+    // axios
+    //   .get('http://localhost:3000/users')
+    //   .then(res => JSON.stringify(res.data))
+    //   .then(data => console.log(data))
+    //   .catch(err => console.log(err));
+    RNRestart.Restart();
     setModalVisible(modalVisible => !modalVisible);
     onChangeNumber('');
     onChangeText('');
